@@ -1,7 +1,7 @@
 .MainContent {
     background-color: #282c34;
     color: #61dafb;
-    justify-content: center;
+    justify-content: space-around;
     margin: 20px;
     padding: 20px;
 }
