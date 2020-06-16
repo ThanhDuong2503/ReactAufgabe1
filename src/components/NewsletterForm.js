@@ -29,7 +29,7 @@ export default function NewsletterForm() {
     }
 
     return (
-    <form className="NewsletterForm" onSubmit = {handleSubmit}>
+    <form className="NewsletterForm" onSubmit={handleSubmit}>
 
         <input
             value={name}

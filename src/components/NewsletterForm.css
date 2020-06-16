@@ -1,6 +1,6 @@
-/*.NewsletterForm {*/
-
-/*    display: flex;*/
-/*    flex-flow: row nowrap;*/
-/*    justify-content: space-around;*/
-/*}*/
+.NewsletterForm {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    padding: 10px;
+}
