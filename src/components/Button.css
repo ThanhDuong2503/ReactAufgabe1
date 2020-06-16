@@ -1,0 +1,7 @@
+.Button {
+    border: solid 3px darkgoldenrod;
+    background-color: #2b2b4b;
+    color: palegoldenrod;
+    padding: 5px;
+    margin: 5px;
+}

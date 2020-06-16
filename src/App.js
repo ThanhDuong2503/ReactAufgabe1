@@ -7,6 +7,7 @@ import CardImage from "./components/CardImage";
 import CardBody from "./components/CardBody";
 import "./components/Card.css"
 import "./components/CardImage.css"
+import "./components/Button.css"
 
 const husky = {
   title: "Husky",
@@ -66,11 +67,11 @@ function App() {
 
       <MainContent>
 
-        <button onClick={displayHusky}>show Husky card</button>
+        <button className="Button" onClick={displayHusky}>show Husky card</button>
 
-        <button onClick={displaySnowLeopard}>show Snow Leopard card</button>
+        <button className="Button" onClick={displaySnowLeopard}>show Snow Leopard card</button>
 
-        <button onClick={displayDolphin}>show Dolphin card</button>
+        <button className="Button" onClick={displayDolphin}>show Dolphin card</button>
 
         <div className="Card">
           <CardBody title={itemsToDisplay.title} infos={itemsToDisplay.infos} >
