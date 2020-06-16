@@ -1,14 +1,8 @@
 import React from "react";
+import "./NewsletterForm.css";
+import "./Button.css";
 
 export default function NewsletterForm() {
-
-    const [email, setEmail] = React.useState("");
-
-    // speichert InputValue von Email
-    function handleChangeEmail(event) {
-        const inputValue= event.target.value;
-        setEmail(inputValue);
-    }
 
     const [name, setName] = React.useState("");
 
@@ -16,6 +10,14 @@ export default function NewsletterForm() {
     function handleChangeName(event) {
         const inputValue= event.target.value;
         setName(inputValue);
+    }
+
+    const [email, setEmail] = React.useState("");
+
+    // speichert InputValue von Email
+    function handleChangeEmail(event) {
+        const inputValue= event.target.value;
+        setEmail(inputValue);
     }
 
     // versendet gesamten Submit
@@ -27,14 +29,7 @@ export default function NewsletterForm() {
     }
 
     return (
-    <form onSubmit = {handleSubmit}>
-
-        <input
-            value={email}
-            placeholder="enter email"
-            type="text"
-            onChange={handleChangeEmail}>
-        </input>
+    <form className="NewsletterForm" onSubmit = {handleSubmit}>
 
         <input
             value={name}
@@ -43,7 +38,14 @@ export default function NewsletterForm() {
             onChange={handleChangeName}>
         </input>
 
-        <button type="submit">submit to Newsletter</button>
+        <input
+            value={email}
+            placeholder="enter email"
+            type="text"
+            onChange={handleChangeEmail}>
+        </input>
+
+        <button className="Button" type="submit">submit to Newsletter</button>
 
     </form>
     );
