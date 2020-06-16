@@ -46,7 +46,7 @@ const dolphin = {
 
 function App() {
 
-  const [itemsToDisplay, setItemsToDisplay] = React.useState(husky);
+  const [itemsToDisplay, setItemsToDisplay] = React.useState(snowleopard);
 
   function displayHusky() {
     setItemsToDisplay(husky);

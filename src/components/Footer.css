@@ -4,4 +4,10 @@
     justify-content: center;
     margin: 20px;
     padding: 20px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    padding: 20px;
+    margin: 20px;
+    align-items: center;
 }
