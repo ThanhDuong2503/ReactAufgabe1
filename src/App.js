@@ -9,7 +9,7 @@ import CardBody from "./components/CardBody";
 import "./components/Card.css"
 import "./components/CardImage.css"
 
-const dog = {
+const husky = {
   title: "Husky",
   infos: "A husky is a sled dog used in polar regions. One can differentiate huskies from other dog types " +
       "by their fast pulling-style. " +
@@ -19,7 +19,7 @@ const dog = {
   imageUrl: "https://cdn.pixabay.com/photo/2018/02/08/16/09/dog-3139757_1280.jpg"
 }
 
-const cat = {
+const snowleopard = {
   title: "Snow Leopard",
   infos: "The snow leopard (Panthera uncia), also known as the ounce, is a large cat native to the mountain " +
       "ranges of Central and South Asia. It is listed as Vulnerable on the IUCN Red List because the global " +
@@ -32,14 +32,14 @@ const cat = {
 
 function App() {
 
-  const [itemsToDisplay, setItemsToDisplay]= React.useState(dog);
+  const [itemsToDisplay, setItemsToDisplay] = React.useState(husky);
 
-  function displayDog() {
-    setItemsToDisplay(dog);
+  function displayHusky() {
+    setItemsToDisplay(husky);
   }
 
-  function displayCat() {
-    setItemsToDisplay(cat);
+  function displaySnowLeopard() {
+    setItemsToDisplay(snowleopard);
   }
 
   return (
@@ -48,18 +48,18 @@ function App() {
 
       <MainContent>
 
-        <button onClick={displayDog}>show dog card</button>
+        <button onClick={displayHusky}>show Husky card</button>
 
-        <button onClick={displayCat}>show cat card</button>
+        <button onClick={displaySnowLeopard}>show Snow Leopard card</button>
 
-        <var className="Card">
+        <div className="Card">
           <CardBody title={itemsToDisplay.title} infos={itemsToDisplay.infos} >
           </CardBody>
 
           <CardImage>
           <img className="CardImage" src={itemsToDisplay.imageUrl} alt="Picture"/>
           </CardImage>
-        </var>
+        </div>
 
       </MainContent>
 
