@@ -1,7 +1,8 @@
 .Button {
-    border: solid 3px darkgoldenrod;
+    border: solid 3px #24c1ec;
     background-color: #2b2b4b;
-    color: palegoldenrod;
+    color: #ffbe00;
     padding: 5px;
     margin: 5px;
+    border-radius: 10px;
 }
