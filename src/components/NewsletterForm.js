@@ -9,8 +9,13 @@ export default function NewsletterForm() {
         setEmail(inputValue);
     }
 
+    function handleSubmit(event) {
+        event.preventDefault();
+        console.log("newsletter will be sent to: " + email);
+    }
+
     return (
-    <form onSubmit = {console.log("submitted")}>
+    <form onSubmit = {handleSubmit}>
         <input
             value={email}
             placeholder="enter email"

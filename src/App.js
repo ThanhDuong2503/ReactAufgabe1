@@ -78,7 +78,7 @@ function App() {
           </CardBody>
 
           <CardImage>
-          <img className="CardImage" src={itemsToDisplay.imageUrl} alt="Picture"/>
+          <img className="CardImage" src={itemsToDisplay.imageUrl} alt=""/>
           </CardImage>
         </div>
 
