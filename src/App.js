@@ -63,7 +63,7 @@ function App() {
   return (
     <div className="App">
 
-    <Header><h1>AnimalCards</h1></Header>
+    <Header>AnimalCards</Header>
 
       <MainContent>
 
@@ -84,7 +84,7 @@ function App() {
 
       </MainContent>
 
-      <Footer><h4>created on the first day learning React</h4></Footer>
+      <Footer>created on the first day learning React</Footer>
 
     </div>
   );
