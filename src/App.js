@@ -29,6 +29,20 @@ const snowleopard = {
   imageUrl: "https://cdn.pixabay.com/photo/2017/08/18/14/00/leopard-2655096_1280.jpg"
 }
 
+const dolphin = {
+  title: "Dolphin",
+  infos: "Dolphin is a common name of aquatic mammals within the infraorder Cetacea. The term dolphin usually " +
+      "refers to the extant families Delphinidae (the oceanic dolphins), Platanistidae (the Indian river dolphins)," +
+      " Iniidae (the New World river dolphins), and Pontoporiidae (the brackish dolphins), " +
+      "and the extinct Lipotidae (baiji or Chinese river dolphin). There are 40 extant species " +
+      "named as dolphins. Dolphins range in size from the 1.7-metre-long (5 ft 7 in) long and 50-kilogram " +
+      "(110-pound) Maui's dolphin to the 9.5 m (31 ft 2 in) and 10-metric-ton (11-short-ton) killer whale. " +
+      "Several species exhibit sexual dimorphism, in that the males are larger than females. " +
+      "They have streamlined bodies and two limbs that are modified into flippers. " +
+      "Though not quite as flexible as seals, some dolphins can travel at 55.5 km/h (34.5 mph).",
+  imageUrl: "https://cdn.pixabay.com/photo/2016/09/18/09/54/sea-1677647_1280.jpg"
+}
+
 function App() {
 
   const [itemsToDisplay, setItemsToDisplay] = React.useState(husky);
@@ -41,6 +55,10 @@ function App() {
     setItemsToDisplay(snowleopard);
   }
 
+  function displayDolphin() {
+    setItemsToDisplay(dolphin);
+  }
+
   return (
     <div className="App">
 
@@ -51,6 +69,8 @@ function App() {
         <button onClick={displayHusky}>show Husky card</button>
 
         <button onClick={displaySnowLeopard}>show Snow Leopard card</button>
+
+        <button onClick={displayDolphin}>show Dolphin card</button>
 
         <div className="Card">
           <CardBody title={itemsToDisplay.title} infos={itemsToDisplay.infos} >

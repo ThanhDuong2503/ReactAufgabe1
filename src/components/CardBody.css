@@ -1,4 +1,6 @@
 .CardBody {
-    max-width: 60%;
+    max-width: 50%;
     height: auto;
+    flex-grow: 1;
+    padding: 10px;
 }
