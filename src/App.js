@@ -3,7 +3,6 @@ import './App.css';
 import Header from "./components/Header";
 import MainContent from "./components/MainContent";
 import Footer from "./components/Footer";
-import Card from "./components/Card";
 import CardImage from "./components/CardImage";
 import CardBody from "./components/CardBody";
 import "./components/Card.css"
@@ -44,6 +43,7 @@ function App() {
 
   return (
     <div className="App">
+
     <Header><h1>AnimalCards</h1></Header>
 
       <MainContent>
@@ -64,6 +64,7 @@ function App() {
       </MainContent>
 
       <Footer><h4>created on the first day learning React</h4></Footer>
+
     </div>
   );
 }
