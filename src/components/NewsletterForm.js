@@ -4,6 +4,7 @@ import "./Button.css";
 
 export default function NewsletterForm() {
 
+    // Destructoring
     const [name, setName] = React.useState("");
 
     // speichert InputValue von Name
@@ -22,6 +23,7 @@ export default function NewsletterForm() {
 
     // versendet gesamten Submit
     function handleSubmit(event) {
+        // verhindert Neuladen der Seite
         event.preventDefault();
         console.log("newsletter will be sent to: " + name + " email: " + email);
         const submitResults = {name, email};

@@ -46,6 +46,7 @@ const dolphin = {
 
 function App() {
 
+  // Destructoring
   const [itemsToDisplay, setItemsToDisplay] = React.useState(snowleopard);
 
   function displayHusky() {
