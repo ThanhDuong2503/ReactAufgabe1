@@ -44,21 +44,40 @@ const dolphin = {
   imageUrl: "https://cdn.pixabay.com/photo/2016/09/18/09/54/sea-1677647_1280.jpg"
 }
 
+async function fetchAnimals(){
+  return fetch ("https://api.jsonbin.io/b/5ee9d2df0e966a7aa36b351f")
+      .then(response => response.json())
+      .then(data => data.animals);
+}
+
+
 function App() {
 
   // Destructoring
   const [itemsToDisplay, setItemsToDisplay] = React.useState(snowleopard);
 
-  function displayHusky() {
-    setItemsToDisplay(husky);
+  // function displayHusky() {
+  //   setItemsToDisplay(husky);
+  // }
+  //
+  // function displaySnowLeopard() {
+  //   setItemsToDisplay(snowleopard);
+  // }
+  //
+  // function displayDolphin() {
+  //   setItemsToDisplay(dolphin);
+  // }
+
+  function setHusky() {
+    fetchAnimals().then(response => setItemsToDisplay(response[1]));
   }
 
-  function displaySnowLeopard() {
-    setItemsToDisplay(snowleopard);
+  function setSnowLeopard() {
+    fetchAnimals().then(response => setItemsToDisplay(response[2]));
   }
 
-  function displayDolphin() {
-    setItemsToDisplay(dolphin);
+  function setDolphin() {
+    fetchAnimals().then(response => setItemsToDisplay(response[0]));
   }
 
   return (
@@ -68,11 +87,15 @@ function App() {
 
       <MainContent>
 
-        <button className="Button" onClick={displayHusky}>show Husky card</button>
+        <button className="Button" onClick={setHusky}>show Husky card</button>
+        <button className="Button" onClick={setSnowLeopard}>show Snow Leopard card</button>
+        <button className="Button" onClick={setDolphin}>show Dolphin card</button>
 
-        <button className="Button" onClick={displaySnowLeopard}>show Snow Leopard card</button>
+        {/*<button className="Button" onClick={displayHusky}>show Husky card</button>*/}
 
-        <button className="Button" onClick={displayDolphin}>show Dolphin card</button>
+        {/*<button className="Button" onClick={displaySnowLeopard}>show Snow Leopard card</button>*/}
+
+        {/*<button className="Button" onClick={displayDolphin}>show Dolphin card</button>*/}
 
         <div className="Card">
           <CardBody title={itemsToDisplay.title} infos={itemsToDisplay.infos} >
